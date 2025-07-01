@@ -24,6 +24,7 @@ const server = new ApolloServer({
   resolvers,
 });
 
+// 快速簡便的方法來啟動一個獨立的 GraphQL 伺服器，並且不依賴其他 HTTP 框架
 const { url } = await startStandaloneServer(server, {
   listen: { port: 9000 },
 });
