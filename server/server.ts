@@ -3,11 +3,18 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 
 /**
  * GraphQL Schema 定義
- * @typedef {string} typeDefs - 使用 GraphQL SDL (Schema Definition Language) 定義的架構
+ */
+// type typeDefs = string;
+
+/**
  * @property {Object} Query - 查詢類型定義
  * @property {string} Query.greeting - 返回問候字串的查詢
  */
-const typeDefs = `#graphqlAdd commentMore actions
+const typeDefs = `#graphql
+schema {
+  query: Query
+}
+
   type Query {
     greeting: String
   }
