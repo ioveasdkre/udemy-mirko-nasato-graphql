@@ -11,10 +11,6 @@ import { startStandaloneServer } from '@apollo/server/standalone';
  * @property {string} Query.greeting - 返回問候字串的查詢
  */
 const typeDefs = `#graphql
-schema {
-  query: Query
-}
-
   type Query {
     greeting: String
   }
