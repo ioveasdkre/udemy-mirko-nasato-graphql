@@ -1,0 +1,55 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "bun dev (client)",
+      "type": "shell",
+      "command": "cd client && bun dev",
+      "presentation": {
+        "reveal": "always"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "bun start (client)",
+      "type": "shell",
+      "command": "cd client && bun start",
+      "presentation": {
+        "reveal": "always"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "bun build (client)",
+      "type": "shell",
+      "command": "cd client && bun build",
+      "presentation": {
+        "reveal": "always"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "bun preview (client)",
+      "type": "shell",
+      "command": "cd client && bun preview",
+      "presentation": {
+        "reveal": "always"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "bun start (server)",
+      "type": "shell",
+      "command": "cd server && bun start",
+      "presentation": {
+        "reveal": "always"
+      },
+      "isBackground": true
+    },
+    {
+      "label": "bun start (all)",
+      "dependsOn": ["bun dev (client)", "bun start (server)"],
+      "dependsOrder": "parallel"
+    }
+  ]
+}
